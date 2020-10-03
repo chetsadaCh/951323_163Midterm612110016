@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Win
+  - Blue
+  - Gray
+  - Green
+  - Red
   layers:
   - Default
   - TransparentFX
