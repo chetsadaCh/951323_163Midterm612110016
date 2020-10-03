@@ -19,8 +19,7 @@ public class MainMenuControlScriptBGMSFX : MonoBehaviour,IPointerEnterHandler{
         this.audiosourceButtonUI = this.gameObject.AddComponent<AudioSource>();
         this.audiosourceButtonUI.outputAudioMixerGroup = SingletonSoundManager.Instance.Mixer.FindMatchingGroups("Ui")[0];
         SetupButtonsDelegate();
-        //if (!SingletonSoundManager.Instance.BGMSource.isPlaying)
-           // SingletonSoundManager.Instance.BGMSource.Play();
+        
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

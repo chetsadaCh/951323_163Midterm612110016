@@ -17,7 +17,7 @@ public class BackMainMenufromCredits : MonoBehaviour, IPointerEnterHandler
         this.audiosourceButtonUI = this.gameObject.AddComponent<AudioSource>();
         this.audiosourceButtonUI.outputAudioMixerGroup = SingletonSoundManager.Instance.Mixer.FindMatchingGroups("Ui")[0];
         SetupButtonsDelegate();
-        
+      
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
