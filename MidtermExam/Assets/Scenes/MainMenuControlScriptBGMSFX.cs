@@ -19,8 +19,8 @@ public class MainMenuControlScriptBGMSFX : MonoBehaviour,IPointerEnterHandler{
         this.audiosourceButtonUI = this.gameObject.AddComponent<AudioSource>();
         this.audiosourceButtonUI.outputAudioMixerGroup = SingletonSoundManager.Instance.Mixer.FindMatchingGroups("Ui")[0];
         SetupButtonsDelegate();
-        if (!SingletonSoundManager.Instance.BGMSource.isPlaying)
-            SingletonSoundManager.Instance.BGMSource.Play();
+        //if (!SingletonSoundManager.Instance.BGMSource.isPlaying)
+           // SingletonSoundManager.Instance.BGMSource.Play();
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -46,7 +46,7 @@ public class MainMenuControlScriptBGMSFX : MonoBehaviour,IPointerEnterHandler{
         if (!SingletonGameApplicationManager.Instance.IsOptionMenuActive)
              {
              SceneManager.LoadScene("SceneOptions", LoadSceneMode.Additive);
-            SingletonGameApplicationManager.Instance.IsOptionMenuActive = true;
+             SingletonGameApplicationManager.Instance.IsOptionMenuActive = true;
              }
          }
     public void CreditsButtonClick(Button button)

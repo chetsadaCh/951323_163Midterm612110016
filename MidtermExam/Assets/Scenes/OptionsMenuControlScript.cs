@@ -40,7 +40,6 @@ public class OptionsMenuControlScript : MonoBehaviour
     }
     public void OnToggleMusic(Toggle toggle)
     {
-
         SingletonGameApplicationManager.Instance.MusicEnabled = _toggleMusic.isOn;
         if (SingletonGameApplicationManager.Instance.MusicEnabled)
              SingletonSoundManager.Instance.MusicVolume = SingletonSoundManager.Instance.MusicVolumeDefault;

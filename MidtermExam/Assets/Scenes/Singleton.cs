@@ -31,6 +31,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                     // Create new instance if one doesn't already exist.
                     if (m_Instance == null)
                     {
+                        // Need to create a new GameObject to attach the singleton to.
                         var singletonObject = new GameObject();
                         m_Instance = singletonObject.AddComponent<T>();
                         singletonObject.name = typeof(T).ToString() + " (Singleton)";
@@ -57,14 +58,17 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         //m_ShuttingDown = true;
     }
-    public void Awake()
-    {
+ 
+    
+    void Awake()
+    {        
         var t = Singleton<T>.Instance;
-       // if (this != null)
-       // {
-           // Destroy(this.gameObject);
-        //}
+        if (Instance != null)
+        {
+            if (this != Instance)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
-
-
 }
